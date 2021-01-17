@@ -1,0 +1,573 @@
+/* core */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 75%;
+    margin: 0 auto;
+}
+html, body{
+    font-family: 'Roboto Slab', 'Times New Roman', Times, serif;
+    line-height: 1.5rem;
+    font-size: 0.95em;
+}
+
+/* header */
+header{
+    background-image: url('/Assignmnet2/img/bg_rectangle0.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5rem;
+}
+
+/* nav */
+nav a{
+    color: #FFF !important;
+}
+nav .navbar-brand{
+    font-size: x-large;
+    font-weight: bold;
+}
+nav #orang-cr{
+    width: 20%;
+}
+nav #orang{
+    border-bottom: solid #FFBB00;
+    border-radius: 10px;
+}
+nav #orang:hover{
+    color: #FFF !important;
+}
+nav .nav-link:hover{
+    border-bottom: solid #FFBB00;
+    border-radius: 10px;
+}
+nav .btn {
+    background-color: #FFBB00;
+    border-radius: 10px;
+}
+nav .btn:hover{
+    background-color: #FFBB00BE;
+}
+
+/* header */
+header .nav-text{
+    padding-top: 10em ;
+    color: #FFF;
+}
+header h1{
+    font-weight: bold;
+}
+header p{
+    line-height: 2em;
+}
+header .down-now{
+    color: #FFF;
+    border: solid 2px #FFF;
+    border-radius: 10px;
+}
+header .down-now:hover{
+    color: #FFBB00;
+    border-color: #FFBB00;
+}
+header .play{
+    border: solid 2px #3298FD;
+    border-radius: 50%;
+    padding: 2px;
+    margin: 0rem 1rem;
+}
+header .play:hover{
+    border-color: #FFBB00;
+}
+header .iphone-header{
+    margin-top: -8rem;
+    position: relative;
+    text-align: center;
+}
+header .iphone-header img{
+    height: 70%;
+}
+header .iphone-header #x1{
+    position: absolute;
+    animation: move-forward 4.5s ease-in-out forwards;
+}
+@keyframes move-forward{
+    from{top: 0rem; right: 9rem;}
+    100%{top: 4rem; right: 15rem;}    
+}
+    
+/* about-us */
+.about-us{
+    padding: 5rem 0rem;
+}
+.about-us .ec-container{
+    text-align: center;
+}
+.about-us .ec-container img{
+    width: 50%;
+    margin-bottom: 10rem;
+}
+.about-us .iphone-aboutus{
+    background-image: url('/Assignmnet2/img/bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+}
+.about-us #x3{
+    width: 70%;
+}
+.about-us #ab{
+    color: #FFBB00;
+    background-color: #FFF5D9;
+    text-align: center;
+    padding: 0.3em 0.5rem;
+    border-radius: 10px;
+}
+.about-us .aboutus-text h2{
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+.about-us .aboutus-text p{
+    color: #8A8A8A;
+    font-size: small;
+    line-height: 2em;
+}
+.about-us #google-play, .about-us #app-store{
+    margin: 2rem 1.5rem;
+    border: solid 2px #FFF;
+    border-radius: 10px;
+    width: 30%;
+}
+.about-us #google-play:hover, .about-us #app-store:hover{
+    border: solid 2px #FFBB00;
+}
+
+/* .features */
+.features{
+    background-color: #FCFCFC;
+    padding: 5rem 0rem;
+}
+.features #feature{
+    color: #FFBB00;
+    background-color: #FFF5D9;
+    width: 15%;
+    text-align: center;
+    border-radius: 10px;
+}
+.features p{
+    color: #8A8A8A;
+    font-size: small;
+}
+.features .features-grid{
+    display: grid;
+    grid-template: 20rem 20rem / 35rem 35rem;
+    grid-template-areas: "features-header iphone-features"
+    "features-info iphone-features";
+    align-items: center;    
+}
+.features .features-header{
+    grid-area: features-header;
+    width: 40rem;
+}
+.features .features-header h2{
+    margin-bottom: 2rem;
+    font-size: xx-large;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+.features .features-header p{
+    line-height: 2em;
+}
+.features .ease-img{
+    background-color: #FFF5D9;
+    border-radius: 10px;
+    padding: 0.3em;
+    text-align: center;
+    margin-right: 0.5rem;
+}
+.features .ease-img img{
+    width: 65%;
+}
+.features .ease{
+    display: flex;
+    align-items: flex-start;
+} 
+.features .ease-text h3{
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.features .ease-text p{
+    font-size: xx-small;
+}
+.features .features-info{
+    grid-area: features-info;
+    display: inline-flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    width: 40rem;
+    gap: 2.5rem;
+} 
+.features .iphone-features{
+    grid-area: iphone-features;
+    text-align: center;
+    position: relative;
+    background-image: url('/Assignmnet2/img/bg_features.png');
+    background-repeat: no-repeat;
+    background-position: 100% 50px;
+    background-size: contain;
+}
+.features .iphone-features #x4{
+    width: 40%;
+    position: relative;
+    z-index: 1;
+    right: -4rem;
+}
+.features .iphone-features #x5{
+    width: 35%;
+    position: absolute;
+    animation: rotate 4.5s ease-in-out forwards;
+}
+@keyframes rotate{
+    from{top: 0rem; right: 8rem; transform: rotate(0);}
+    100%{top: 2rem; right: 18rem; transform: rotate(-42.5deg);}    
+}
+
+/* .screens */
+.screens{
+    padding: 5rem 0rem;
+}
+.screens .screens-text h2{
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.screens .screens-text p{
+    color: #8A8A8A;
+    font-size: small;
+    line-height: 2em;
+    margin-bottom: 2rem;
+}
+.screens img{
+    width: 20%;
+    margin: auto;
+}
+.screens .carousel-indicators .active{
+    background-color: #FFBB00;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(50%);
+}
+
+/* .statistics */
+.statistics{
+    padding: 5rem 0rem;
+    background-image: url('/Assignmnet2/img/statistics_img.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.statistics .statistics-header h2{
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.statistics .statistics-header p{
+    color: #8A8A8A;
+    font-size: small;
+    line-height: 2em;
+    margin-bottom: 2rem;
+}
+.statistics .statistics-info{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.statistics .statistics-info h3{
+    color: #3096FE;
+    font-weight: bold;
+}
+.statistics .statistics-info p{
+    font-weight: bold;
+    font-size: small;
+}
+
+/* .dowmload */
+.download{
+    padding: 5rem  0 0 0rem;
+    background-image: url('/Assignmnet2/img/bg_download.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFF;
+}
+.download .download-text h2{
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.download .download-text p{
+    line-height: 2em;
+    margin-bottom: 2rem;
+    font-size: smaller;
+}
+.download .download-text img{
+    width: 25%;
+    margin-right: 2rem;
+    border: solid 2px #FFF;
+    border-radius: 10px;
+}
+.download .download-text img:hover{
+    border: solid 2px #FFBB00;
+}
+.download .carousel{
+    position: absolte;
+}
+.download #iphone-download img{
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+.download #iphone-download{
+    width: 25%;
+    height: 20rem;
+    background-color: #3096FE;
+}
+
+/* .contactus */
+.contactus{
+    padding: 5rem 0rem;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    background-color: #FFF;
+}
+.contactus contactus-text h2{
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.contactus .contactus-text p{
+    line-height: 2em;
+    color: #8A8A8A;
+    margin-bottom: 2rem;
+    font-size: smaller;
+}
+.contactus ::placeholder{
+    color: #CCCCCC;
+}
+
+/* footer */
+footer{
+    height: 15rem;
+    text-align: center;
+    background-image: url('/Assignmnet2/img/bg_footer.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+footer a{
+    text-decoration: none;
+    color: #FFF;
+}
+footer li{
+    list-style: none;
+}
+footer #footer-logo{
+    font-size: x-large;
+    font-weight: bold;
+}
+footer #footer-img{
+    width: 1.5%;
+}
+footer #footer-logo:hover{
+    color: #FFF;
+}
+footer .footer-link{
+    padding: 0.5rem;
+    font-weight: 500;
+}
+footer .footer-link:hover{
+    color: #FFF;
+    border-bottom: solid 2px #FFBB00;
+    border-radius: 10px;
+}
+footer .footer-link{
+    padding: 0 1rem;
+}
+footer .social-icon{
+    padding: 0.65rem;
+    border: solid 2px transparent;
+    animation: bouncy 5s infinite linear;
+    position: relative;
+}
+@keyframes bouncy {
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em}
+}
+footer .delay1{
+    animation-delay:0.07s
+}
+.footer .delay2{
+    animation-delay:0.14
+}
+footer .delay3{
+    animation-delay:0.21s
+}
+footer .social-icon:hover{
+    border: solid 2px #FFBB00;
+    border-radius: 10px;
+}
+
+/* mmedia queries */
+/* mobile */
+@media (max-width: 480px){
+    header .nav-text{
+        font-size: small;
+    }
+    header .iphone-header img{
+        height: 60%;
+    }
+    header .iphone-header{
+        margin-top: 8rem;
+        text-align: right;
+    }
+    header .iphone-header #x1{
+        animation: move-forward 4.5s ease-in-out forwards;
+    }
+    @keyframes move-forward{
+        from{top: 0rem; right: 1rem;}
+        100%{top: 4rem; right: 10rem;}    
+    }
+    .about-us{
+        padding: 0rem;
+        text-align: ceter;
+    }
+    .about-us br{
+        display: none;
+    }
+    .about-us #x3{
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+   .about-us .aboutus-text p{
+        font-size: x-small;
+    }
+    .features{
+        background-color: #FCFCFC;
+        padding: 5rem 0rem;
+        font-size: x-small;
+        text-align: left;
+    }
+    .features #feature{
+        width: 25%;
+    }
+    .features .features-grid{
+        display: grid;
+        grid-template: 100px r 1fr/ 1fr;
+        grid-template-areas: "features-header"
+        "features-info"
+        "iphone-features";
+        align-items: center;    
+    }
+    .features br{
+        display: none;
+    }
+    .features .features-header{
+        width: 20rem;
+    } 
+    .features .features-info{
+        margin-top: 10rem;
+    }
+    .features .iphone-features{
+        width: 20rem;
+        margin-top: 10rem;
+        background-position: center;
+    }
+    .features .iphone-features #x4{
+        width: 30%;
+        right: -1rem;
+    }
+    .features .iphone-features #x5{
+        width: 25%;
+       animation: rotate 4.5s ease-in-out forwards;
+    }
+    @keyframes rotate{
+        from{top: 0rem; left: 8rem; transform: rotate(0);}
+        100%{top: 2rem; left: 6rem; transform: rotate(-42.5deg);}    
+    }
+    .screens br{
+        display: none;
+    }
+    .screens .screens-text p{
+        font-size: smaller;
+    }
+    .screens img{
+        width: 40%;
+    }
+    .statistics br{
+        display: none;
+    }
+    .statistics .statistics-header p{
+        font-size: smaller;
+    }
+    .statistics .statistics-info{
+        flex-direction: column;
+    }
+    .statistics .statistics-info h3{
+        font-size: x-large;
+    }
+    .statistics .statistics-info p{
+        font-size: smaller;
+        margin-bottom: 2rem;
+    }
+    .download br{
+        display: none;
+    }
+    .download{
+        text-align: center;
+    }
+    .download .download-text img{
+        width: 35%;
+    }
+    .download #iphone-download img{
+        margin-top: 5rem;
+    }
+    .download #iphone-download{
+        width: 55%;
+        margin: auto;
+    }
+    .contactus br{
+        display: none;
+    }
+    footer{
+        height: 25rem;    
+    }
+    footer .footer-links{
+        display: flex;
+        flex-direction: column;
+    }
+    footer .footer-link{
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        padding: 5rem;
+    }
+/* tablet */
+@media (min-width: 768px){
+    
+}
+/* desktops */
+@media (max-width: 1024px){
+
+}
+/* desktops, large screens */
+@media (max-width: 1200px){
+
+}
