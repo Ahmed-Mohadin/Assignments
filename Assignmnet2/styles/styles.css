@@ -105,9 +105,12 @@ header .iphone-header #x1{
 }
 .about-us .ec-container{
     text-align: center;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 .about-us .ec-container img{
-    width: 50%;
+    width: 20%;
     margin-bottom: 10rem;
 }
 .about-us .iphone-aboutus{
@@ -230,11 +233,12 @@ header .iphone-header #x1{
 .features .iphone-features #x5{
     width: 35%;
     position: absolute;
-    animation: rotate 4.5s ease-in-out forwards;
+    animation: rotate 10s ease-in-out infinite;
 }
 @keyframes rotate{
-    from{top: 0rem; right: 8rem; transform: rotate(0);}
-    100%{top: 2rem; right: 18rem; transform: rotate(-42.5deg);}    
+    from{top: 2rem; right: 8rem; transform: rotate(0);}
+    50%{top: 2rem; right: 18rem; transform: rotate(-42.5deg);}    
+    100%{top: 2rem; right: 8rem; transform: rotate(0);}
 }
 
 /* .screens */
@@ -332,7 +336,6 @@ header .iphone-header #x1{
 .download #iphone-download{
     width: 25%;
     height: 20rem;
-    background-color: #3096FE;
 }
 
 /* .contactus */
@@ -428,146 +431,600 @@ footer .social-icon:hover{
 
 /* mmedia queries */
 /* mobile */
-@media (max-width: 480px){
-    header .nav-text{
-        font-size: small;
+@media (min-width: 320px){
+    
+    /* nav */
+    header br{
+        display: none;
     }
-    header .iphone-header img{
-        height: 60%;
+    header .nav-text{
+        padding-top: 10rem;
+    }
+    header p, header span,  header .down-now{
+        font-size: x-small;
+    } 
+    header .play img{
+        margin-left: -1rem;
+        margin-right: -1rem;
     }
     header .iphone-header{
         margin-top: 8rem;
         text-align: right;
     }
+    header .iphone-header #x2{
+        height: 55%;
+    }
     header .iphone-header #x1{
+        height: 55%;
         animation: move-forward 4.5s ease-in-out forwards;
     }
     @keyframes move-forward{
         from{top: 0rem; right: 1rem;}
-        100%{top: 4rem; right: 10rem;}    
+        100%{top: 6rem; right: 6rem;}    
     }
+
+    /* .about-us */
     .about-us{
-        padding: 0rem;
-        text-align: ceter;
+        margin-top: -10rem;
+        margin-bottom: -15rem;
     }
-    .about-us br{
+     .about-us br{
         display: none;
     }
+    .about-us .aboutus-text h2{
+        font-size: medium;
+    }
+    .about-us .aboutus-text p{
+        font-size: x-small;
+    }
+    .about-us .ec-container{
+        margin-bottom: -5rem;
+    }
+    .about-us .iphone-aboutus{
+        margin-bottom: 4rem;
+    }
     .about-us #x3{
-        width: 60%;
-        margin-bottom: 2rem;
+        width: 50%;
     }
-   .about-us .aboutus-text p{
-        font-size: x-small;
+    .about-us #google-play, .about-us #app-store{
+        width: 45%;
+        margin: 1rem auto;
     }
-    .features{
-        background-color: #FCFCFC;
-        padding: 5rem 0rem;
-        font-size: x-small;
-        text-align: left;
-    }
-    .features #feature{
-        width: 25%;
-    }
-    .features .features-grid{
-        display: grid;
-        grid-template: 100px r 1fr/ 1fr;
-        grid-template-areas: "features-header"
-        "features-info"
-        "iphone-features";
-        align-items: center;    
-    }
+
+    /* .features */
     .features br{
         display: none;
     }
+    .features #feature{
+        width: 30% !important;
+    }
+    .features .features-grid{
+        grid-template: 1fr 1fr 1fr / 1fr;
+        grid-template-areas: "features-header"
+        "features-info"
+        "iphone-features"; 
+    }
     .features .features-header{
-        width: 20rem;
-    } 
+        grid-area: features-header;
+        width: 16rem !important;
+    }
+    .features .features-header h2{
+        font-size: medium;
+    }
+    .features .features-header p{
+        font-size: x-small;
+    }
+    .features .ease-img{
+        margin-right: 1.5rem;
+    }
     .features .features-info{
-        margin-top: 10rem;
+        grid-area: features-info;
+        width: 15rem !important;
+    } 
+    .features .features-info h3{
+        font-size: small;
     }
     .features .iphone-features{
-        width: 20rem;
-        margin-top: 10rem;
-        background-position: center;
+        margin-top: 3rem;
     }
     .features .iphone-features #x4{
-        width: 30%;
-        right: -1rem;
+        left: 1rem;
+        width: 40%;
     }
     .features .iphone-features #x5{
-        width: 25%;
-       animation: rotate 4.5s ease-in-out forwards;
+        width: 35%;
+        animation: rotate 10s ease-in-out infinite;
     }
     @keyframes rotate{
-        from{top: 0rem; left: 8rem; transform: rotate(0);}
-        100%{top: 2rem; left: 6rem; transform: rotate(-42.5deg);}    
+        from{top: 1rem; right: 4rem; transform: rotate(0);}
+        50%{top: 1rem; right: 9rem; transform: rotate(-42.5deg);}    
+        100%{top: 1rem; right: 4rem; transform: rotate(0);}
     }
+
+    /* .screens */
     .screens br{
         display: none;
     }
+    .screens .screens-text h2{
+        font-size: medium;
+    }
     .screens .screens-text p{
-        font-size: smaller;
+        margin-bottom: 4rem;
+        font-size: x-small;
     }
     .screens img{
-        width: 40%;
+        width: 50%;
     }
+
+    /* .statistics */
     .statistics br{
         display: none;
     }
+    .statistics .statistics-header h2{
+        font-size: medium;
+    }
     .statistics .statistics-header p{
+        margin-bottom: 5rem;
+        font-size: x-small;
+    }
+    .statistics .statistics-info h3{
+        font-size: small;
+    }
+    .statistics .statistics-info p{
+        font-size: xx-small;
+    }
+
+    /* .dowmload */
+    .download br{
+        display: none;
+    }
+    .download .download-text h2{
+        font-size: medium;
+    }
+    .download .download-text p{
+        font-size: x-small;
+    }
+    .download .download-text img{
+        width: 40%;
+        margin: auto;
+    }
+    .download .carousel{
+        margin-top: 5rem;
+    }
+    .download #iphone-download{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    /* .contactus */
+    .contactus br{
+        display: none;
+    }
+    .contactus .contactus-text p{
+        font-size: medium;
+    }
+    .contactus .contactus-text p{
+        font-size: x-small;
+        margin-top: 2rem;
+        margin-bottom: -1rem;
+    }
+    .contactus .gy-4 ::-webkit-input-placeholder{
+        font-size: small;
+    }
+    .contactus .gy4 .form-control{
+        max-width: 100% !important;
+    }
+
+    /* footer */
+    footer{
+        height: 20rem;
+    }
+    footer #footer-img{
+        width: 1.5%;
+    }
+    footer .footer-links{
+        font-size: small;
+        flex-direction: column;
+    }
+    footer .footer-link a{
+        padding: 20rem !important;
+    }
+}
+@media (min-width: 480px){
+    
+    /* nav */
+    header p, header span,  header .down-now{
+        font-size: unset;
+    } 
+    header .play img{
+        margin-left: unset;
+        margin-right: unset;
+    }
+    header .iphone-header #x2{
+        height: 60%;
+    }
+    header .iphone-header #x1{
+        height: 60%;
+        animation: move-forward 4.5s ease-in-out forwards;
+    }
+    @keyframes move-forward{
+        from{top: 0rem; right: 1rem;}
+        100%{top: 6rem; right: 8rem;}    
+    }
+   
+    /* .about-us */
+    .about-us .aboutus-text h2{
+        font-size: x-large;
+    } 
+    .about-us .aboutus-text p{
         font-size: smaller;
     }
-    .statistics .statistics-info{
-        flex-direction: column;
+    .about-us #x3{
+        width: 40%;
+    }
+    .about-us .iphone-aboutus{
+        width: 100%;
+    }
+
+    /* .features */
+    .features{
+        margin-top: 10rem;
+    }
+    .features .features-header{
+        width: 25rem !important;
+    }
+    .features .features-header p{
+        font-size: smaller;
+    }
+    .features .features-header h2{
+        font-size: x-large;
+    }
+    .features .features-info h3{
+        font-size: large;
+    }
+    .features .features-info{
+        width: 30rem;  
+    } 
+    .features .iphone-features #x5{
+        animation: rotate 10s ease-in-out infinite;
+    }
+    @keyframes rotate{
+        from{top: 2.5rem; right: 8rem; transform: rotate(0);}
+        50%{top: 2.5rem; right: 13rem; transform: rotate(-42.5deg);}    
+        100%{top: 2.5rem; right: 8rem; transform: rotate(0);}
+    }
+
+    /* .screens */
+    .screens .screens-text h2{
+        font-size: x-large;
+    } 
+    .screens .screens-text p{
+        font-size: smaller;
+    }
+
+    /* .statistics */
+    .statistics .statistics-header h2{
+        font-size: x-large;
+    }
+    .statistics .statistics-header p, .statistics .statistics-info p{
+        font-size: smaller;
     }
     .statistics .statistics-info h3{
         font-size: x-large;
     }
-    .statistics .statistics-info p{
+
+    /* .dowmload */
+    .download .download-text h2{
+        font-size: x-large;
+    }
+    .download .download-text p{
         font-size: smaller;
-        margin-bottom: 2rem;
     }
-    .download br{
-        display: none;
+    .download .carousel img{
+        width: 65% !important;
     }
-    .download{
-        text-align: center;
+
+    /* .contactus */
+    .contactus .contactus-text h2{
+        font-size: x-large;
+    } 
+    .contactus .contactus-text p{
+        font-size: smaller;
     }
-    .download .download-text img{
-        width: 35%;
-    }
-    .download #iphone-download img{
-        margin-top: 5rem;
-    }
-    .download #iphone-download{
-        width: 55%;
-        margin: auto;
-    }
-    .contactus br{
-        display: none;
-    }
-    footer{
-        height: 25rem;    
-    }
-    footer .footer-links{
-        display: flex;
-        flex-direction: column;
-    }
-    footer .footer-link{
-        padding-bottom: 2rem;
-        margin-bottom: 2rem;
-        padding: 5rem;
-    }
+    .contactus .gy-4 ::-webkit-input-placeholder{
+        font-size: unset;
+    }   
+}
 /* tablet */
 @media (min-width: 768px){
     
+    /* nav */
+    header .play img{
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+    header .down-now,  header .nav-text span{
+        font-size: x-small;
+    }
+    header .iphone-header{
+        margin-top: unset;
+    }
+
+    /* .about-us */
+    .about-us{
+        margin-bottom: -25rem;
+    }
+    .about-us #x3{
+        width: 30%;
+    }
+    .about-us #google-play, .about-us #app-store{
+        width: 25%;
+    }
+
+    /* .features */
+    .features .features-header{
+        width: 40rem !important;
+        margin-bottom: -15rem;
+    }
+    .features .features-info{
+        width: 30rem !important;
+    }
+    .features .iphone-features{
+        margin-top: 3rem;
+    }
+    .features .iphone-features #x5{
+        animation: rotate 10s ease-in-out infinite;
+    }
+    @keyframes rotate{
+        from{top: 2rem; right: 11rem; transform: rotate(0);}
+        50%{top: 2rem; right: 20rem; transform: rotate(-42.5deg);}    
+        100%{top: 2rem; right: 11rem; transform: rotate(0);}
+    }
+
+    /* .screens */
+    .screens br{
+        display: unset;
+    }
+    .screens img{
+        width: 30%;
+    }
+
+    /* .statistics */
+    .statistics br{
+        display: unset;
+    }
+
+    /* .dowmload */
+    .download br{
+        display: none;
+    }
+    .download .download-text img{
+        width: 25%;
+        margin-right: 2rem;
+    }
+    .download .carousel{
+        margin-top: 5rem !important;
+        margin-right: -5rem;
+    }
+    .download .carousel img{
+        width: 80% !important;
+    }
+    .download #iphone-download{
+        width: 25%;
+    }
+    
+    /* .contactus */
+    .contactus br{
+        display: unset;
+    }
+
+    /* footer */
+    footer #footer-img{
+        width: 1.5%;
+    }
+    footer .footer-links{
+        margin: 2rem 0rem;
+        flex-direction: row;
+    }
+    footer .social-icons{
+        margin-top: 2rem !important;
+    }
 }
 /* desktops */
-@media (max-width: 1024px){
+@media (min-width: 1024px){
 
+    /* nav */
+    header br{
+        display: unset;
+    }
+    header .nav-text p{
+        margin-bottom: 2rem;
+        font-size: small;
+    }
+    header .down-now,  header .nav-text span{
+        font-size: unset;
+    }
+    
+    header .play img{
+        margin:  0px !important;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    header .iphone-header{
+        margin-top: unset;
+    }
+    header .iphone-header #x2{
+        height: 70%;
+    }
+    header .iphone-header #x1{
+        height: 70%;
+        animation: move-forward 4.5s ease-in-out forwards;
+    }
+    @keyframes move-forward{
+        from{top: 0rem; right: 1rem;}
+        100%{top: 6rem; right: 10rem;}    
+    }
+
+    /* .about-us */
+    .about-us{
+        margin-top: 5rem;
+        margin-bottom: -20rem;
+    }
+    .about-us br{
+        display: unset;
+    }
+    .about-us .aboutus-text{ 
+        margin: 0 !important;
+        width: 37.5rem;
+    }
+    .about-us .ec-container{
+        margin-bottom: -5rem;
+    }
+    .about-us .iphone-aboutus{
+        margin-bottom: 4rem;
+        width: 13rem;
+    }
+    .about-us #x3{
+        margin-top: 4rem;
+        width: 80% !important;
+    }
+    .about-us #google-play, .about-us #app-store{
+        width: 30%;
+        margin: 1rem 2rem;
+    }
+
+    /* .features */
+    .features{
+        margin-bottom: 10rem;
+    }
+    .features br{
+        display: unset;
+    }
+    .features .features-header #feature{
+        width: 15% !important;
+    } 
+    .features .features-grid{
+        grid-template: 20rem 20rem / 35rem 35rem; 
+        grid-template-areas: "features-header iphone-features"
+        "features-info iphone-features";    
+    }
+    .features .features-header{
+        width: 36rem !important;
+    }
+    .features .ease{
+        width: 15rem;
+        margin-bottom: -1rem;
+    }
+    .features .features-info{
+        width: 35rem !important;
+        margin-top: 3rem;
+    } 
+    .features .iphone-features{
+        margin-top: 13rem;
+        width: 20rem !important;
+    }
+    .features .iphone-features #x4{
+        left: 2rem;
+        width: 55%;
+    }
+    .features .iphone-features #x5{
+        width: 50%;
+        animation: rotate 10s ease-in-out infinite;
+    }
+    @keyframes rotate{
+        from{top: 2rem; right: 3rem; transform: rotate(0);}
+        50%{top: 2rem; right: 8rem; transform: rotate(-42.5deg);}    
+        100%{top: 2rem; right: 3rem; transform: rotate(0);}
+    }
+
+    /* .screens */
+    .screens br{
+        display: unset;
+    }
+    .screens img{
+        width: 20%;
+    }
+
+    /* .dowmload */
+    .download br{
+        display: unset;
+    }
+    .download .carousel{
+        margin-top: -0.5rem !important;
+    }
+    .download .carousel img{
+        width: 80% !important;
+    }
+    .download .download-text img{
+        width: 20%;
+    }
+    .download #iphone-download{
+        width: 20%;
+    }
 }
 /* desktops, large screens */
-@media (max-width: 1200px){
+@media (min-width: 1200px){
 
+    /* nav */
+    header .iphone-header{
+        margin-top: -5rem;
+    }
+    header .iphone-header #x2,   header .iphone-header #x1{
+        height: 75%;
+    }
+
+    /* .about-us */
+    .about-us .iphone-aboutus{
+        width: unset;
+    }
+    .about-us #x3{
+        margin-top: 1rem;
+        width: 60% !important;
+    }
+
+    /* .features */
+    .features{
+        margin-bottom: 5rem;
+    }
+    .features .features-info{
+        margin-top: 5rem;
+    } 
+    .features .iphone-features{
+        width: 25rem !important;
+    }
+    .features .iphone-features #x4{
+        width: 50%;
+    }
+    .features .iphone-features #x5{
+        width: 45%;
+        animation: rotate 10s ease-in-out infinite;
+    }
+    @keyframes rotate{
+        from{top: 2rem; right: 5rem; transform: rotate(0);}
+        50%{top: 2rem; right: 12rem; transform: rotate(-42.5deg);}    
+        100%{top: 2rem; right: 5rem; transform: rotate(0);}
+    }
+
+    /* .dowmload */
+    .download .carousel{
+        margin-top: -2rem !important;
+    }
+    .download #iphone-download{
+        width: 25%;
+    }
+}
+@media (min-width: 1440px){
+
+    /* .features */
+    .features .iphone-features{
+        width: 30rem !important;
+    }
+    .features .iphone-features #x5{
+        animation: rotate 10s ease-in-out infinite;
+    }
+    @keyframes rotate{
+        from{top: 2rem; right: 7rem; transform: rotate(0);}
+        50%{top: 2rem; right: 12rem; transform: rotate(-42.5deg);}    
+        100%{top: 2rem; right: 7rem; transform: rotate(0);}
+    }
 }
